@@ -1,0 +1,1 @@
+<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div><?php /**PATH C:\Users\Administrator\Local Sites\el-farouk-ecommerce\app\public\@core\resources\views/components/loader/html.blade.php ENDPATH**/ ?>
