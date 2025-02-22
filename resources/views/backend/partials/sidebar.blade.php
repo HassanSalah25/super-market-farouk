@@ -66,7 +66,7 @@
 {{--                        </li>--}}
 {{--                    @endif--}}
 
-                    @if (auth('admin')->user()->hasRole('Super Admin'))
+                    {{--@if (auth('admin')->user()->hasRole('Super Admin'))
                         <li class="main_dropdown @if (request()->is(['admin-home/mobile-slider-two/*','admin-home/mobile-featured-product/*','admin-home/mobile-campaign/*','admin-home/mobile-settings/*'])) active @endif">
                             <a href="javascript:void(0)" aria-expanded="true"><i class="fas fa-mobile-alt"></i>
                                 <span>{{ __('Mobile Modules') }}</span></a>
@@ -95,7 +95,7 @@
                                 </li>
                             </ul>
                         </li>
-                    @endif
+                    @endif--}}
 
 {{--                    @if (auth('admin')->user()->hasRole('Super Admin'))--}}
 {{--                        <li class="main_dropdown @if (request()->is(['admin-home/mobile-featured-product/*'])) active @endif">--}}

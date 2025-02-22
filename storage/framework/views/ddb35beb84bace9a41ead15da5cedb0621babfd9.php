@@ -21,7 +21,7 @@
                                                                 <?php echo e(__('All Categories')); ?></h5>
                                                         </li>
                                                         <?php
-                                                          $slider_categories = getAllCategory()->take(9);
+                                                          $slider_categories = getAllCategory()->take(7);
                                                          ?>
                                                         <?php $__currentLoopData = $slider_categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                             <li class="item-vertical mega-style1 with-sub-menu hover">

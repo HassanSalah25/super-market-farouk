@@ -8,7 +8,10 @@
                 <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="swiper-slide">
                         <div class="collection-item">
-                            <a href="">
+                            <a href="<?php echo e(route('frontend.products.category', [
+                                'id' => optional($category)->id,
+                                'slug' => \Str::slug(optional($category)->title ?? '')
+                            ])); ?>">
                                 <?php echo render_image_markup_by_attachment_id($category->image); ?>
 
                             </a>

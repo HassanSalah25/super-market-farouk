@@ -68,36 +68,7 @@
 
 
 
-                    <?php if(auth('admin')->user()->hasRole('Super Admin')): ?>
-                        <li class="main_dropdown <?php if(request()->is(['admin-home/mobile-slider-two/*','admin-home/mobile-featured-product/*','admin-home/mobile-campaign/*','admin-home/mobile-settings/*'])): ?> active <?php endif; ?>">
-                            <a href="javascript:void(0)" aria-expanded="true"><i class="fas fa-mobile-alt"></i>
-                                <span><?php echo e(__('Mobile Modules')); ?></span></a>
-                            <ul class="collapse">
-                                <li class="<?php echo e(active_menu('admin-home/mobile-slider/create')); ?>"><a
-                                            href="<?php echo e(route('admin.mobile.slider.create')); ?>"><?php echo e(__('Slider Create')); ?></a></li>
-                                <li class="<?php echo e(active_menu('admin-home/mobile-slider/list')); ?>"><a
-                                            href="<?php echo e(route('admin.mobile.slider.all')); ?>"><?php echo e(__('Slider List')); ?></a></li>
-                                </li>
-                                <li class="<?php echo e(active_menu('admin-home/mobile-slider-two/create')); ?>"><a
-                                            href="<?php echo e(route('admin.mobile.slider.two.create')); ?>"><?php echo e(__('Slider two Create')); ?></a></li>
-                                <li class="<?php echo e(active_menu('admin-home/mobile-slider-two/list')); ?>"><a
-                                            href="<?php echo e(route('admin.mobile.slider.two.all')); ?>"><?php echo e(__('Slider two List')); ?></a></li>
-                                </li>
-                                <li class="<?php echo e(active_menu('admin-home/mobile-campaign/create')); ?>">
-                                    <a href="<?php echo e(route('admin.mobile.campaign.create')); ?>"><?php echo e(__('Campaign Update')); ?></a>
-                                </li>
-                                <li class="<?php echo e(active_menu('admin-home/mobile-featured-product/new')); ?>">
-                                    <a href="<?php echo e(route('admin.featured.product.create')); ?>"><?php echo e(__('Featured Product Update')); ?></a>
-                                </li>
-                                <li class="<?php echo e(active_menu('admin-home/mobile-settings/terms-and-controller')); ?>">
-                                    <a href="<?php echo e(route('admin.mobile.settings.terms_and_condition')); ?>"><?php echo e(__('Terms and condition page')); ?></a>
-                                </li>
-                                <li class="<?php echo e(active_menu('admin-home/mobile-settings/privacy-policy')); ?>">
-                                    <a href="<?php echo e(route('admin.mobile.settings.privacy.policy')); ?>"><?php echo e(__('Privacy and policy page')); ?></a>
-                                </li>
-                            </ul>
-                        </li>
-                    <?php endif; ?>
+                    
 
 
 
