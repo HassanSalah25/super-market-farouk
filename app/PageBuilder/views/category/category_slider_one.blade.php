@@ -8,7 +8,10 @@
                 @foreach($categories as $category)
                     <div class="swiper-slide">
                         <div class="collection-item">
-                            <a href="">
+                            <a href="{{ route('frontend.products.category', [
+                                'id' => optional($category)->id,
+                                'slug' => \Str::slug(optional($category)->title ?? '')
+                            ]) }}">
                                 {!! render_image_markup_by_attachment_id($category->image) !!}
                             </a>
                             <p class="item-quantity" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="3000">

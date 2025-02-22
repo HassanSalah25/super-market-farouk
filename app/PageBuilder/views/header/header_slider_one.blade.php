@@ -21,7 +21,7 @@
                                                                 {{ __('All Categories') }}</h5>
                                                         </li>
                                                         @php
-                                                          $slider_categories = getAllCategory()->take(9);
+                                                          $slider_categories = getAllCategory()->take(7);
                                                          @endphp
                                                         @foreach($slider_categories as $category)
                                                             <li class="item-vertical mega-style1 with-sub-menu hover">
