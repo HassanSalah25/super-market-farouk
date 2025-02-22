@@ -104,7 +104,7 @@ class MenuBuilderFrontendRender
 
             $output .=  $this->render_li_start($pname,$attributes_string,$default_lang);
             $title = $pname;
-            $output .= $this->get_anchor_markup($title,[
+            $output .= $this->get_anchor_markup(__($title),[
                 'href' => str_replace('@url',url('/'),$menu_item->purl),
                 'target' => $menu_item->antarget ?? '',
             ],$menu_item->icon ?? '');
@@ -118,7 +118,7 @@ class MenuBuilderFrontendRender
 
 
                 // get anchor data
-                $output .= $this->get_anchor_markup($title,[
+                $output .= $this->get_anchor_markup(__($title),[
                     'href' => route('frontend.products.category',['id' => $model->id,'title' => Str::slug($title)]) ,
                     'target' => $menu_item->antarget ?? '',
                 ],$menu_item->icon ?? '');
@@ -135,16 +135,18 @@ class MenuBuilderFrontendRender
             }
 
             $title = get_static_option(str_replace('-','_',$menu_item->pslug).'_page_name') ?? '';
+
             $output .=  $this->render_li_start($pname,$attributes_string,$default_lang);
 
 
             // get anchor data
-            $output .= $this->get_anchor_markup($title,[
+            $output .= $this->get_anchor_markup(__($title),[
                 'href' => url('/').'/'. $menu_slug ?? '' ,
                 'target' => $menu_item->antarget ?? '',
             ],$menu_item->icon ?? '');
 
-        }else{
+        }
+        else{
             //check is mega menu
             preg_match('/MegaMenus/',$ptype,$matches);
             preg_match('/CategoryMenu/',$ptype,$cat_menu);
@@ -158,13 +160,14 @@ class MenuBuilderFrontendRender
                     $title = htmlspecialchars(strip_tags(get_static_option($static_name)));
                     $output .=  $this->render_li_start($title,$li_attributes,$default_lang);
                     // get anchor data
-                    $output .= $this->get_anchor_markup($title,[
+                    $output .= $this->get_anchor_markup(__($title),[
                         'href' => url('/').'/'.get_static_option($instance->slug()) ?? '#' ,
                         'target' => $menu_item->antarget ?? '',
                     ],$menu_item->icon ?? '');
                     $output .= $instance->render($menu_item->items_id ?? '',$default_lang);
                 }
-            }elseif (!empty($cat_menu[0])){
+            }
+            elseif (!empty($cat_menu[0])){
 
                 //load mega menu content
                 $li_attributes = ['class' => 'menu-item-has-children  mega-menu-wrap'];
@@ -177,7 +180,7 @@ class MenuBuilderFrontendRender
                         $title = htmlspecialchars(strip_tags($category->title));
                         $output .=  $this->render_li_start($title,$li_attributes,$default_lang);
                         // get anchor data
-                        $output .= $this->get_anchor_markup($title,[
+                        $output .= $this->get_anchor_markup(__($title),[
                             'href' => 'javascript:void(0)',//route('frontend.products.category',['id' => $category->id,'title' => Str::slug($title)]) ?? '#' ,
                         ],$menu_item->icon ?? '');
                         $output .= $instance->render($menu_item->items_id ?? '',$default_lang,$menu_item->sub_cat_items_id ?? '',$title);
@@ -251,7 +254,7 @@ class MenuBuilderFrontendRender
                     }
 
                     if($title){
-                        $output .= $this->get_anchor_markup($title,[
+                        $output .= $this->get_anchor_markup(__($title),[
                             'href' => route($dynamic_menu_type['route'],$route_params),
                             'target' => $menu_item->antarget ?? '',
                         ],$menu_item->icon ?? '');
@@ -260,6 +263,7 @@ class MenuBuilderFrontendRender
                 }
             }
         }
+
         //check it has children
         if (property_exists($menu_item,'children')){
             $output .= $this->render_children_item($menu_item->children,$default_lang);

@@ -14,6 +14,7 @@ class ProductCategory extends Model
         'image'
     ];
 
+
     public function subcategory()
     {
         return $this->hasMany(ProductSubCategory::class, 'category_id', 'id');

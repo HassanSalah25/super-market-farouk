@@ -62,13 +62,13 @@
                                                 <div class="content-box">
                                                     <p class="slider-subtitle"><img
                                                                 src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/banner/wvbo-icon.png"
-                                                                alt=""> <?php echo e($data['title_'][$key]); ?> </p>
-                                                    <h2 class="slider-title"><?php echo e($data['subtitle_'][$key]); ?></h2>
+                                                                alt=""> <?php echo e(__($data['title_'][$key])); ?> </p>
+                                                    <h2 class="slider-title"><?php echo e(__($data['subtitle_'][$key])); ?></h2>
                                                     <div class="slider-description">
-                                                        <p><?php echo e($data['offer_text_'][$key]); ?></p>
+                                                        <p><?php echo e(__($data['offer_text_'][$key])); ?></p>
                                                     </div>
                                                     <a href="<?php echo e(\App\traits\URL_PARSE::url($data['button_url_'][$key])); ?>"
-                                                       class="slider-btn2"><?php echo e($data['button_text_'][$key]); ?></a>
+                                                       class="slider-btn2"><?php echo e(__($data['button_text_'][$key])); ?></a>
                                                 </div>
                                             </div>
                                         </div>

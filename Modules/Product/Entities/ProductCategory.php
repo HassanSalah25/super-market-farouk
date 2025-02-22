@@ -13,6 +13,12 @@ class ProductCategory extends Model
         'status',
         'image'
     ];
+    // get title attribute with edits
+    public function getTitleAttribute($value)
+    {
+        return $this->attributes['title'] = __($value);
+    }
+
 
     public function subcategory()
     {

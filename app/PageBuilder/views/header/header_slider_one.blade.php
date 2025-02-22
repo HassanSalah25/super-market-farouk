@@ -60,13 +60,13 @@
                                                 <div class="content-box">
                                                     <p class="slider-subtitle"><img
                                                                 src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/banner/wvbo-icon.png"
-                                                                alt=""> {{ $data['title_'][$key] }} </p>
-                                                    <h2 class="slider-title">{{ $data['subtitle_'][$key] }}</h2>
+                                                                alt=""> {{ __($data['title_'][$key]) }} </p>
+                                                    <h2 class="slider-title">{{ __($data['subtitle_'][$key]) }}</h2>
                                                     <div class="slider-description">
-                                                        <p>{{ $data['offer_text_'][$key] }}</p>
+                                                        <p>{{ __($data['offer_text_'][$key]) }}</p>
                                                     </div>
                                                     <a href="{{ \App\traits\URL_PARSE::url($data['button_url_'][$key]) }}"
-                                                       class="slider-btn2">{{ $data['button_text_'][$key] }}</a>
+                                                       class="slider-btn2">{{ __($data['button_text_'][$key]) }}</a>
                                                 </div>
                                             </div>
                                         </div>
