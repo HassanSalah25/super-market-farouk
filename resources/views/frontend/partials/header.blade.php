@@ -105,69 +105,37 @@
 
         <!-- Header Top -->
         <div class="header-top hidden-compact" dir="ltr">
-            <div class="container">
-                <div class="row">
-                    <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
-                        <div class="hidden-md hidden-sm hidden-xs welcome-msg">
-                            <ul class="social-link-list">
 
-                                @if(!empty($all_social_item) && $all_social_item->count())
-
-                                    @foreach ($all_social_item as $social_item)
-
-                                        <li class="link-item"><a href="{{ $social_item->url }}">
-                                                <i class="{{ $social_item->icon }} icon"></i></a>
-                                        </li>
-
-                                    @endforeach
-
-                                @endif
-
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="header-top-right collapsed-block col-lg-5 col-md-4 col-sm-6 col-xs-8">
-                        <ul class="top-link list-inline lang-curr">
-
-                            <li class="language">
-                                <div class="btn-group languages-block ">
-                                    <div class="select-option">
-
-                                        <div class="single-select">
-
-                                            <select class="lang" id="change_site_language" style="padding-top: 0;padding-bottom: 0">
-
-                                                @if($all_language && $all_language->count())
-
-                                                    @foreach($all_language as $lang)
-
-                                                        @php
-
-                                                            $lang_name = explode('(',$lang->name);
-
-                                                            $data = array_shift($lang_name);
-
-                                                        @endphp
-
-                                                        <option @if(get_user_lang() == $lang->slug) selected
-                                                                @endif value="{{$lang->slug}}">{{$data}}</option>
-
-                                                    @endforeach
-
-                                                @endif
-
-                                            </select>
-
-                                        </div>
-
+            <div class="header-topbar header-topbar1">
+                <div class="container">
+                    <div class="header-top-area">
+                        <div class="slider-div">
+                            <div class="swiper rts-topSlide1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <h3 class="welcome-text"> Open Door To A worlds Of Fashion<a href="#">Discover
+                                                Now</a></h3>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h3 class="welcome-text"> Enjoy free shipping on orders 100$ up<a href="#">Discover
+                                                Now</a></h3>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h3 class="welcome-text"> Open Door To A worlds Of Fashion<a href="#">Discover
+                                                Now</a></h3>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h3 class="welcome-text"> Enjoy free shipping on orders 100$ up<a href="#">Discover
+                                                Now</a></h3>
                                     </div>
                                 </div>
-
-                            </li>
-                        </ul>
-
-
+                                <div class="slider-navigation2">
+                                    <div class="swiper-button-prev slider-btn prev"><i class="rt rt-arrow-left-long"></i></div>
+                                    <div class="swiper-button-next slider-btn next"><i class="rt rt-arrow-right-long"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -276,7 +244,7 @@
                                         <span id="remove-megamenu" class="fa fa-times"></span>
                                         <div class="megamenu-pattern">
                                             <div class="container-mega">
-                                                <ul class="megamenu" data-transition="slide" data-animationtime="250">
+                                                <ul class="megamenu nav-style-03" data-transition="slide" data-animationtime="250">
 
 
                                                     {!! render_frontend_menu($primary_menu) !!}

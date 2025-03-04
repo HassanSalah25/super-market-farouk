@@ -1,3 +1,35 @@
+<?php $__env->startSection('style'); ?>
+    <style>
+        .megamenu {
+            z-index: 4;
+            border-radius: 0px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            padding: 10px;
+            background-color: #FFFFFF10;
+            transition: all 0.3s ease-in-out 0s;
+        }
+         .bg-info-1 {
+             border-radius: 10px;
+             -moz-border-radius: 10px;
+             -webkit-border-radius: 10px;
+             text-shadow: none;
+             color: #fff;
+             font-weight: 400;
+             font-size: 16px;
+             font-size: 1.6rem;
+             line-height: 50px;
+             padding: 10px !important;
+             margin: 0;
+             position: relative;
+             text-transform: capitalize;
+             display: block;
+         }
+    </style>
+<?php $__env->stopSection(); ?>
+
 <div class="banner banner-1 bg-image ar-rtl" data-padding-top="<?php echo e($settings['padding_top']); ?>"
      data-padding-bottom="<?php echo e($settings['padding_bottom']); ?>">
     <div class="container custom-container-1318">

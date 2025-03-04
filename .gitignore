@@ -1,3 +1,4 @@
 /storage/*.key
 /vendor
+/public/assets
 .env.backup

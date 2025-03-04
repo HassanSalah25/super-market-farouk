@@ -1,36 +1,166 @@
-<div class="about-area-wrapper" data-padding-top="<?php echo e($padding_top); ?>"  data-padding-bottom="<?php echo e($padding_bottom); ?>">
-    <div class="container custom-container-1318">
-        <div class="row sec custom-reverse <?php if($image_position == 'left'): ?> flex-row-reverse <?php endif; ?>">
-            <div class="col-lg-6">
-                <div class="content-box">
-                    <h4 class="title"><?php echo e(html_entity_decode($title)); ?></h4>
-                    <div class="advantage-box support-area-wrapper">
-                        <div class="support-item-wrap">
-                            <?php $__currentLoopData = $all_features['title_']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $title): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <div class="single-support-item">
-                                    <div class="icon-box">
-                                        <i class="<?php echo e($all_features['icon_'][$loop->index]); ?> icon"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h5 class="title"><?php echo e($title); ?></h5>
-                                        <p class="info"><?php echo e($all_features['description_'][$loop->index]); ?></p>
-                                    </div>
+
+<!--================= Team Area Start Here =================-->
+<div class="team-area">
+    <div class="container">
+        <div class="sub-content">
+            <img class="line-1" src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/banner/wvbo-icon.png" alt="">
+            <span class="sub-text">Team</span>
+            <img class="line-2" src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/banner/wvbo-icon.png" alt="">
+        </div>
+        <h2 class="title">Meet With Team</h2>
+        <div class="slider-div">
+            <div class="swiper rts-cmmnSlider-over2" data-swiper="pagination">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="team-wraper">
+                            <div class="team-thumb">
+                                <a href="#"><img src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/about/1.jpg" alt="collection-image"></a>
+                            </div>
+                            <div class="team-content">
+                                <h3>
+                                    <a href="#" class="item-catagory-box">Richard John</a>
+                                </h3>
+                                <h6>Founder</h6>
+                                <div class="footer__social">
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-facebook-f"></i></a>
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-twitter"></i></a>
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-linkedin-in"></i></a>
                                 </div>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="btn-wrapper">
-                        <a href="<?php echo e(\App\traits\URL_PARSE::url($button_url)); ?>" class="btn-default rounded-btn"><?php echo e($button_text); ?></a>
+                    <div class="swiper-slide">
+                        <div class="team-wraper">
+                            <div class="team-thumb">
+                                <a href="#"><img src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/about/2.jpg" alt="collection-image"></a>
+                            </div>
+                            <div class="team-content">
+                                <h3>
+                                    <a href="#" class="item-catagory-box">Larry Mord</a>
+                                </h3>
+                                <h6>Founder</h6>
+                                <div class="footer__social">
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-facebook-f"></i></a>
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-twitter"></i></a>
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="img-box">
-                    <?php echo render_image_markup_by_attachment_id($section_image); ?>
-
+                    <div class="swiper-slide">
+                        <div class="team-wraper">
+                            <div class="team-thumb">
+                                <a href="#"><img src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/about/3.jpg"
+                                                 alt="collection-image"></a>
+                            </div>
+                            <div class="team-content">
+                                <h3>
+                                    <a href="#" class="item-catagory-box">Tom Ashik</a>
+                                </h3>
+                                <h6>Founder</h6>
+                                <div class="footer__social">
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-facebook-f"></i></a>
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-twitter"></i></a>
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="team-wraper">
+                            <div class="team-thumb">
+                                <a href="#"><img src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/about/4.jpg" alt="collection-image"></a>
+                            </div>
+                            <div class="team-content">
+                                <h3>
+                                    <a href="#" class="item-catagory-box">John Milo</a>
+                                </h3>
+                                <h6>Founder</h6>
+                                <div class="footer__social">
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-facebook-f"></i></a>
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-twitter"></i></a>
+                                    <a class="footer-icon" href="#"><i aria-hidden="true"
+                                                                       class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<?php /**PATH C:\Users\Administrator\Local Sites\el-farouk-ecommerce\app\public\@core\app\Providers/../PageBuilder/views/about/about_style_two.blade.php ENDPATH**/ ?>
+<!--================= Team Area End Here =================-->
+
+<!--================= Feature Area Start Here =================-->
+<div class="features-area">
+    <div class="container">
+        <div class="features-1">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="image-section">
+                        <a href="#"><img src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/about/features-1.jpg" alt="features-1"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-content">
+                        <div class="sub-content">
+                            <img class="line-1" src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/banner/wvbo-icon.png" alt="">
+                            <span class="sub-text">Features #01</span>
+                            <img class="line-2" src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/banner/wvbo-icon.png" alt="">
+                        </div>
+                        <h2 class="title">Solutions That Work Together</h2>
+                        <p class="description">Publish your eCommerce site quickly with our easy-to-use store
+                            builder— no
+                            coding required. Migrate your items from your point of sale system or turn your
+                            Instagram feed into a shopping site and start selling fast. Square Online works
+                            for all kinds of businesses—retail, restaurants, services.</p>
+                        <div class="section-button">
+                            <a href="#">Get In Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="features-2">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-content">
+                        <div class="sub-content">
+                            <img class="line-1" src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/banner/wvbo-icon.png" alt="">
+                            <span class="sub-text">Features #01</span>
+                            <img class="line-2" src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/banner/wvbo-icon.png" alt="">
+                        </div>
+                        <h2 class="title">All Kinds of Payments Securely</h2>
+                        <p class="description">Publish your eCommerce site quickly with our easy-to-use store
+                            builder— no
+                            coding required. Migrate your items from your point of sale system or turn your
+                            Instagram feed into a shopping site and start selling fast. Square Online works
+                            for all kinds of businesses—retail, restaurants, services.</p>
+                        <div class="section-button">
+                            <a href="#">Contact With Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="image-section">
+                        <a href="#"><img src="https://weiboo.pixcelsthemes.com/weiboo/assets/images/about/features-2.jpg" alt="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================= Feature Area End Here =================-->
+   <?php /**PATH C:\Users\Administrator\Local Sites\el-farouk-ecommerce\app\public\@core\app\Providers/../PageBuilder/views/about/about_style_two.blade.php ENDPATH**/ ?>

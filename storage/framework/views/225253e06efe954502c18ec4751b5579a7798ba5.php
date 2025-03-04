@@ -283,7 +283,6 @@
 
 </script>
 <script>
-
     $(document).ready(function(){
         $("#show-megamenu").click(function(){
             $("#show-2").toggle();
@@ -300,7 +299,6 @@
         });
     });
 </script>
-
 
 </body>
 </html>

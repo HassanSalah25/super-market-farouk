@@ -22,6 +22,7 @@ use App\PageBuilder\Addons\Blog\NewsUpdateStyleOne;
 use App\PageBuilder\Addons\Blog\NewsUpdateStyleTwo;
 use App\PageBuilder\Addons\Brand\BrandLogoStyleOne;
 use App\PageBuilder\Addons\Blog\BlogSliderOne;
+use App\PageBuilder\Addons\categories\CategorySliderThree;
 use App\PageBuilder\Addons\Category\CategorySliderOne;
 use App\PageBuilder\Addons\Common\ImageSectionStyleOne;
 use App\PageBuilder\Addons\Common\ImageUrlSectionStyleOne;
@@ -45,6 +46,7 @@ use App\PageBuilder\Addons\Product\ProductGridOne;
 use App\PageBuilder\Addons\Product\ProductSliderFive;
 use App\PageBuilder\Addons\Product\ProductSliderFour;
 use App\PageBuilder\Addons\Product\ProductSliderOne;
+use App\PageBuilder\Addons\Product\ProductSliderSix;
 use App\PageBuilder\Addons\Product\ProductSliderThree;
 use App\PageBuilder\Addons\Product\ProductSliderTwo;
 use Illuminate\Support\Facades\Cache;
@@ -89,12 +91,14 @@ class PageBuilderSetup
             ProductSliderThree::class,
             ProductSliderFour::class,
             ProductSliderFive::class,
+            ProductSliderSix::class,
             ProductGridOne::class,
             ProductFilterOne::class,
             ProductCategorySliderOne::class,
             ProductCategoryFilterOne::class,
             ProductCategoryMenu::class,
             CategorySliderOne::class,
+            CategorySliderThree::class,
             ShopPage::class,
             ShopPageStyleTwo::class,
             BlogSliderOne::class,

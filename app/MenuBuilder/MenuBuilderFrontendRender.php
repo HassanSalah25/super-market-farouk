@@ -81,7 +81,7 @@ class MenuBuilderFrontendRender
 
     private function render_menu_item($menu_item, int $page_id, $default_lang)
     {
-        $attributes_string = property_exists($menu_item,'children') ? ['class' => ['menu-item-has-children']]  : [];
+        $attributes_string = property_exists($menu_item,'children') ? ['class' => ['with-sub-menu hover']]  : [];
 
         if (empty((array)$menu_item)){return;}
         $menu_item = (object) $menu_item ;
@@ -170,7 +170,7 @@ class MenuBuilderFrontendRender
             elseif (!empty($cat_menu[0])){
 
                 //load mega menu content
-                $li_attributes = ['class' => 'menu-item-has-children  mega-menu-wrap'];
+                $li_attributes = ['class' => 'with-sub-menu hover  mega-menu-wrap'];
                 $class_name = '\\'.$ptype;
                 $instance = new $class_name();
                 if ($instance->enable()){
